@@ -14,6 +14,8 @@ var (
 	}
 
 	url = "https://jsonplaceholder.typicode.com/todos/1"
+
+	GetDataFromAPI = getDataFromAPI
 )
 
 type Data struct {

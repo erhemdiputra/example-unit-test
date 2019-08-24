@@ -12,7 +12,7 @@ func main() {
 }
 
 func processData() (string, error) {
-	data, err := getDataFromAPI()
+	data, err := GetDataFromAPI()
 	if err != nil {
 		return "", err
 	}
