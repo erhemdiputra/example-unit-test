@@ -3,7 +3,7 @@ package main
 import "log"
 
 func main() {
-	result, err := processData()
+	result, err := processData(getDataFromAPI)
 	if err != nil {
 		log.Println(err)
 	}
@@ -11,8 +11,8 @@ func main() {
 	log.Println(result)
 }
 
-func processData() (string, error) {
-	data, err := getDataFromAPI()
+func processData(getData func() (*Data, error)) (string, error) {
+	data, err := getData()
 	if err != nil {
 		return "", err
 	}
